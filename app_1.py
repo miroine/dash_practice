@@ -12,10 +12,23 @@ server=app.server
 
 app.layout = html.Div ([ 
     html.H1('Hello Dash !'),
-    html.Div('Dash Data product development')
+    html.Div('Dash Data product development'),
+
+
+    dcc.Graph(
+        id ="sample graph",
+        figure= {
+            'data':[
+                {'x':[4,6,7],'y':[12,16,18],'type':'bar','name':'First graph'}
+            ],
+            'layout':{
+                'title' : 'Simple Bar Chart'
+            }
+        }
+    )
 ])
 
 
 
 if __name__ == '__main__':
-    app.run_server(port=4050)
+    app.run_server(port=4051)
