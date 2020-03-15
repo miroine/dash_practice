@@ -8,7 +8,7 @@ import dash_html_components as html
 app = dash.Dash(__name__,external_stylesheets=[
    'https://codepen.io/amyoshino/pen/jzXypZ.css' 
 ])
-
+server=app.server 
 # Boostrap CSS.
 #app.css.append_css({'external_url': 'https://codepen.io/amyoshino/pen/jzXypZ.css'})  # noqa: E501
 
